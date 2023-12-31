@@ -1,0 +1,23 @@
+﻿<Window x:Class="KonyvtarAsztaliWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KonyvtarAsztaliWPF"
+        mc:Ignorable="d"
+        Title="Könyvtár" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Button x:Name="buttonTorles" Content="Törlés" HorizontalAlignment="Left" Margin="20" Click="buttonTorles_Click"/>
+            <!--<Button x:Name="buttonModositas" Content="Módosítás" HorizontalAlignment="Left" Margin="20" Click="buttonModositas_Click"/>-->
+            <DataGrid x:Name="dataGridBooks" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Cím" FontWeight="Bold" Binding="{Binding Title}"/>
+                    <DataGridTextColumn Header="Szerző" FontWeight="Bold" Binding="{Binding Author}"/>
+                    <DataGridTextColumn Header="Kiadás éve" FontWeight="Bold" Binding="{Binding Publish_year}"/>
+                    <DataGridTextColumn Header="Oldalszám" FontWeight="Bold" Binding="{Binding Page_count}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Window>
